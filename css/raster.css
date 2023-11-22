@@ -1,0 +1,171 @@
+@charset "utf-8";
+
+/*
+* CSS-Design Raster
+* gardeco-Website
+* Online-Schule fuer Gestaltung: Webdesign-Kurs
+*/
+
+
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* maximale Content-Breite */
+
+.wrapper {
+    max-width: 1250px;
+    padding: 0 3%;
+    margin: 0 auto;
+}
+
+/* Volle Breite */
+
+.wide {
+    max-width: 100%;
+    padding: 0;
+}
+
+/* optimale Bildbreite */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Flexbox */
+
+.flex-container {
+    display: flex;
+    gap: 3%;
+    margin: 10px 0;
+    flex-direction: row;
+}
+
+.flex-container > * {
+    flex: 1;
+}
+
+/* Header Flexbox */
+
+header .flex-container {
+    justify-content: space-between;
+} 
+
+header .flex-container > * {
+    flex: initial;
+} 
+
+/* Grid */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+
+/* Referenz 2, Text rechts */
+
+.reverse {
+    grid-auto-flow: dense;
+}
+
+.reverse .text {
+    grid-column: 3 / 4;
+}
+
+
+
+
+/*** Media Queries ***/
+
+
+/* Tablets Portrait */
+
+@media only screen and (max-width: 1024px) {
+    .flex-container {
+        flex-direction: column;
+    }
+    
+    .flex-container-1024px {
+        display: flex;
+        gap: 3%;
+        margin: 10px 0;
+        flex-direction: row;
+    }
+
+    .flex-container-1024px > * {
+        flex: 1;
+    }
+
+    .flex-container-1024px > .icon {
+        flex: initial;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: min-content;
+        justify-items: stretch;
+        gap: 10px;
+        margin: 20px 0;
+    }
+
+    .grid-container > .text {
+        grid-column: 1 / 3;
+    }
+
+}
+
+/* Smartphones */
+
+@media only screen and (max-width: 767px) {
+    .flex-container-1024px {
+        flex-direction: column;
+    }
+
+    .flex-container-767px {
+        display: flex;
+        gap: 3%;
+        margin: 10px 0;
+        flex-direction: row;
+    }
+
+    .grid-container {
+        display: flex;
+        gap: 3%;
+        margin: 20px 0;
+        flex-direction: column;
+    }
+
+    .grid-container > * {
+        margin: 5px 0;
+    }
+
+    .grid-container img {
+        max-width: 400px;
+        height: auto;
+    }
+}
+
+/* Small Smartphones */
+
+@media only screen and (max-width: 576px) {
+    .flex-container-767px {
+        flex-direction: column;
+    }
+
+    .flex-container-576px {
+        display: flex;
+        gap: 3%;
+        margin: 10px 0;
+        flex-direction: row;
+    }
+}

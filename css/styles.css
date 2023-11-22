@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+/*
+* CSS-Design Styles
+* gardeco-Website
+* Online-Schule fuer Gestaltung: Webdesign-Kurs
+*/
+
+body {
+    font-size: 20px;
+}
+
+.box {
+    background-color: #ddd;
+}
+
+
+
+/* Header - Navigation */
+
+#navigation {
+    background-color: #ddd;
+    display: flex;
+    gap: 2rem;
+}
+
+#navigation li {
+    list-style-type: none;
+}
+
+
+/* Abstände */
+
+main section {
+    margin: 100px 0;
+}
+
+.flex-container {
+    margin: 30px 0;
+}
+
+header .flex-container {
+    margin: 0;
+}
+
+/* Hero - Schrift zentrieren */
+
+section.hero .wrapper {
+    position: relative;
+}
+
+section.hero .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+
+/* Footer */
+
+aside {
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+
+/*** Media Queries ***/
+
+
+/* Tablets Landscape */
+
+@media only screen and (max-width: 1200px) {
+    body {
+        font-size: 18px;
+    }
+
+    main section {
+        margin: 75px 0;
+    }
+
+    .flex-container {
+        margin: 20px 0;
+    }
+
+    aside {
+        padding: 15px 0;
+    }
+}
+
+
+/* Smartphones Portrait */
+
+@media only screen and (max-width: 767px) {
+    body {
+        font-size: 16px;
+    }
+
+    main section {
+        margin: 50px 0;
+    }
+
+    .flex-container {
+        margin: 10px 0;
+    }
+
+    aside {
+        padding: 10px 0;
+    }
+
+    #navigation {
+        flex-wrap: wrap;
+    }
+
+}
